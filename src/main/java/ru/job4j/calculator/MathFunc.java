@@ -3,15 +3,13 @@ package ru.job4j.calculator;
 public class MathFunc {
 
     public static int func1(int x) {
-        //int y = x * x + 1;
-        //убрал переменную y, так как выдается ошибка "local variable is redundant"
-        return x * x + 1;
+        int y = x * x + 1;
+        return y;
     }
 
     public static int func2(int x) {
-        //int y = 1 / x;
-        // убрал переменную y, так как выдается ошибка "local variable is redundant"
-        return 1 / x;
+        int y = 1 / x;
+        return y;
     }
 
     public static void main(String[] args) {
