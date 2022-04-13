@@ -7,11 +7,12 @@ public class Cryptography {
 
         } else {
             StringBuilder sb = new StringBuilder(s);
-            for (int i = 0; i < sb.length(); i++)
+            for (int i = 0; i < sb.length(); i++) {
                 if (i < sb.length() - 4) {
                     sb.setCharAt(i, '#');
                 }
-            s = sb.toString();
+                s = sb.toString();
+            }
         }
         return s;
     }
