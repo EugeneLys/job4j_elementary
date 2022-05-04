@@ -36,14 +36,20 @@ public class OrArray {
                 t++;
             }
         }
+
         int[] result = new int[t];
-        int k = 0;
-        for (int j : temp) {
-            if (j != 0) {
-                result[k] = j;
-                k++;
-            }
-        }
-        return result;
+        return rotate(temp, result);
     }
+
+        public static int[] rotate(int[] src, int[] rsl) {
+            int k = 0;
+            for (int j : src) {
+                if (j != 0) {
+                    rsl[k] = j;
+                    k++;
+                }
+            }
+            return rsl;
+        }
+
 }
