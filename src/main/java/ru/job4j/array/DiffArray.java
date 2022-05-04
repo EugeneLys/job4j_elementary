@@ -2,9 +2,6 @@ package ru.job4j.array;
 
 import java.util.Arrays;
 
-//Разность множеств это операция при которой в результирующее множество
-// попадают элементы из первого множества, но только если их нет во втором множестве.
-
 public class DiffArray {
     public static int[] diff(int[] left, int[] right) {
 
