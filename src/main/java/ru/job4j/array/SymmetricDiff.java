@@ -40,28 +40,42 @@ public class SymmetricDiff {
                 }
             }
 
-            for (int i = 0; i < right.length; i++) {
-                for (int j = 0; j < rightTemp.length; j++) {
-                    if (i != j) {
-                        temp[t] = right[i];
-                        t++;
+            if (r > 0) {
+                for (int i = 0; i < r; i++) {
+                    for (int j = 0; j < right.length; j++) {
+                        if (j != rightTemp[i]) {
+                            temp[t] = right[j];
+                            t++;
+                        }
                     }
+                }
+            } else {
+                for (int j = 0; j < right.length; j++) {
+                        temp[t] = right[j];
+                        t++;
                 }
             }
 
-            for (int i = 0; i < left.length; i++) {
-                for (int j = 0; j < leftTemp.length; j++) {
-                    if (i != j) {
-                        temp[t] = left[i];
+            if (l > 0) {
+                for (int i = 0; i < l; i++) {
+                    for (int j = 0; j < left.length; j++) {
+                        if (j != leftTemp[i]) {
+                            temp[t] = left[j];
+                            t++;
+                        }
+                    }
+                }
+            } else {
+                for (int j = 0; j < left.length; j++) {
+                        temp[t] = left[j];
                         t++;
                     }
                 }
-            }
+
         }
-            Arrays.sort(temp);
             int[] result = new int[t];
             System.arraycopy(temp, 0, result, 0, result.length);
+            Arrays.sort(result);
             return result;
-        }
     }
-
+}
