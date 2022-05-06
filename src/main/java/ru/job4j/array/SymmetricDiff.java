@@ -50,9 +50,9 @@ public class SymmetricDiff {
                     }
                 }
             } else {
-                for (int j = 0; j < right.length; j++) {
-                        temp[t] = right[j];
-                        t++;
+                for (int i : right) {
+                    temp[t] = i;
+                    t++;
                 }
             }
 
@@ -66,10 +66,10 @@ public class SymmetricDiff {
                     }
                 }
             } else {
-                for (int j = 0; j < left.length; j++) {
-                        temp[t] = left[j];
-                        t++;
-                    }
+                for (int i : left) {
+                    temp[t] = i;
+                    t++;
+                }
                 }
 
         }
