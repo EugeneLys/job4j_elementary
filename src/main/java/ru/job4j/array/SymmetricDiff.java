@@ -70,7 +70,7 @@ public class SymmetricDiff {
                     temp[t] = i;
                     t++;
                 }
-                }
+            }
 
         }
             int[] result = new int[t];
