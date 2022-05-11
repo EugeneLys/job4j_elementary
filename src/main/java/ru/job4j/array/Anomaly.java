@@ -9,6 +9,7 @@ public class Anomaly {
         int totalCount = 0;
         int[] temp = new int[data.length];
         int i = 0;
+
         while (i < data.length) {
             while (data[i] <= down || data[i] >= up) {
                 temp[count] = i;
