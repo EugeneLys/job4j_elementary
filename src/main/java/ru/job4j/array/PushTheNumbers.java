@@ -13,11 +13,9 @@ public class PushTheNumbers {
             if (i == row) {
                 i++;
             }
-            while (i > row) {
+            while (i > row && i < temp.length) {
                 temp[i][column] = array[i - 1][column];
-                if (i < array.length - 1) {
-                    i++;
-                }
+                i++;
             }
         }
 
@@ -30,13 +28,12 @@ public class PushTheNumbers {
             if (i == column) {
                 i++;
             }
-            while (i > column) {
+            while (i > column && i < array.length) {
                 temp[row][i] = array[row][i - 1];
-                if (i < array.length - 1) {
                     i++;
                 }
             }
-        }
+
         temp[row][column] = 0;
         for (int j = 0; j < array.length; j++) {
             array[row][j] = temp[row][j];
