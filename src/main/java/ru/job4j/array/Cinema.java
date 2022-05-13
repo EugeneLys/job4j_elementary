@@ -4,18 +4,22 @@ import java.util.Objects;
 
 public class Cinema {
     public static Place checkEmptyPlace(Place[][] places) {
-
+        Place place = new Place(-1, -1);
         for (int i = 0; i < places.length; i++) {
             for (int j = 0; j < places.length; j++) {
                 if (places[i][j] == null && i < places.length - 1 && j < places.length - 1) {
                     if (places[i][j + 1] == null && places[i + 1][j] == null) {
-                        Place ob = new Place(i, j);
-
+                        place.row = i;
+                        place.cell = j;
+                        break;
                     }
                 }
             }
         }
-        return null;
+        if (place.row == -1) {
+            place = null;
+        }
+        return place;
     }
 
     public static class Place {
