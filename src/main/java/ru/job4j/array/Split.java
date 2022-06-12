@@ -6,17 +6,17 @@ public class Split {
     public static char[][] split(char[] str, char c) {
         char[][] result = new char[str.length / 2][];
         int commonCount = 0;
-        int r = 0;
-            for (int i = 0; i < result.length && r < str.length; i++) {
+        int pos = 0;
+            for (int i = 0; i < result.length && pos < str.length; i++) {
                 char[] temp = new char[str.length];
                 int count = 0;
-                for (int j = r; j < str.length; j++) {
+                for (int j = pos; j < str.length; j++) {
                     if (str[j] != c) {
                         temp[count] = str[j];
                         count++;
-                        r++;
+                        pos++;
                     } else {
-                        r++;
+                        pos++;
                         break;
                     }
                 }

@@ -8,14 +8,13 @@ public class Anomaly {
         int count = 0;
         int totalCount = 0;
         int[] temp = new int[data.length];
-        int i = 0;
-
-        while (i < data.length) {
-            while (data[i] <= down || data[i] >= up) {
-                temp[count] = i;
+        int index = 0;
+        while (index < data.length) {
+            while (data[index] <= down || data[index] >= up) {
+                temp[count] = index;
                 count++;
-                if (i < data.length - 1) {
-                    i++;
+                if (index < data.length - 1) {
+                    index++;
                 } else {
                     break;
                 }
@@ -28,7 +27,7 @@ public class Anomaly {
                 count = 0;
                 totalCount++;
             }
-            i++;
+            index++;
         }
         return Arrays.copyOf(result, totalCount);
     }

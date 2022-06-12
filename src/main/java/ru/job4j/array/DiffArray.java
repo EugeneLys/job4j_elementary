@@ -4,17 +4,16 @@ import java.util.Arrays;
 
 public class DiffArray {
     public static int[] diff(int[] left, int[] right) {
-
         int[] temp = new int[left.length];
-        int t = 0;
+        int count = 0;
         if (left.length != 0 && right.length != 0) {
-            for (int i = 0; i < left.length; i++) {
+            for (int j : left) {
                 for (int k : right) {
-                    if (left[i] == k) {
+                    if (j == k) {
                         break;
                     } else {
-                        temp[t] = left[i];
-                        t++;
+                        temp[count] = j;
+                        count++;
                     }
                 }
             }
@@ -22,12 +21,12 @@ public class DiffArray {
 
         if (right.length == 0) {
             for (int j : left) {
-                temp[t] = j;
-                t++;
+                temp[count] = j;
+                count++;
             }
         }
 
-        int[] result = new int[t];
+        int[] result = new int[count];
         for (int i = 0; i < result.length; i++) {
             result[i] = temp[i];
         }
