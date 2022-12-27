@@ -11,9 +11,9 @@ public class JavaNameValidator {
         for (int i = 0; i < name.length(); i++) {
             char c = name.charAt(i);
             if (!isSpecialSymbol(c)
-                && !isUpperLatinLetter(c)
-                && !isLowerLatinLetter(c)
-                && !Character.isDigit(c)) {
+                    && !isUpperLatinLetter(c)
+                    && !isLowerLatinLetter(c)
+                    && !Character.isDigit(c)) {
                 return false;
             }
         }
